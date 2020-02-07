@@ -1,7 +1,7 @@
 ## Code Anywhere.....
 ### Run VS Code online with NodeJS
 
-[![Luz Glass | Web RTC]https://github.com/cdr/code-server/blob/master/doc/assets/ide.gif)](https://github.com/cdr/code-server/blob/master/doc/assets/ide.gif)
+[![VSCode with NodeJS]https://github.com/cdr/code-server/blob/master/doc/assets/ide.gif)](https://github.com/cdr/code-server/blob/master/doc/assets/ide.gif)
 
 #### Try it out
 docker-compose up -d
