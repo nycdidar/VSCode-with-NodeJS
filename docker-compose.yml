@@ -1,0 +1,40 @@
+# docker-compose.yml
+version: '3.4'
+services:
+  vscode:
+    container_name: vscode
+    image: didar911/vscode
+    networks:
+      vscode:
+          aliases:
+              - vscode
+    ports:
+      - '8080:8080/tcp'
+    environment:
+      - PASSWORD=skybird
+    volumes:
+      - ./:/home/coder/project
+  nodejs_dev:
+    container_name: nodejs_dev
+    build:
+      context: .
+      dockerfile: ./nodejs/Dockerfile
+    networks:
+      vscode:
+        aliases:
+            - vscode
+    command: >
+      /bin/bash -c "
+        npm run dev
+      "
+    ports:
+      - '4100:4100/tcp'
+    environment:
+      - NODE_ENV=development
+      - ENV_NAME=dev
+      - PORT=4100
+    volumes:
+      - ./nodejs/src:/app/src
+networks:
+  vscode:
+    driver: bridge
