@@ -28,7 +28,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "define-properties": "^1.1.3",
-    "express": "^4.13.3",
+    "express": "^4.17.3",
     "is-symbol": "^1.0.3",
     "node-cron": "^2.0.3",
     "node-persist": "^3.0.5",
